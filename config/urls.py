@@ -19,7 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('landingpage.urls')),
-    # PWA
-    path('app/', include('game.urls')),
+    path('', include('game.urls')),
+    
 ]
+    

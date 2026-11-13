@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'landing',
     'accounts',
     'news',
-    'landingpage',
     'game'
 ]
 

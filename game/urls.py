@@ -12,6 +12,12 @@ urlpatterns = [
     ),
 
     path(
+        'registro/',
+         views.registro, 
+         name='registro'
+         ),
+
+    path(
         'novedades/',
         views.novedades,
         name='novedades'
@@ -45,5 +51,17 @@ urlpatterns = [
         views.logout_view,
         name='logout'
     ),
+
+    path(
+        'offline/', 
+        views.offline, 
+        name='offline'
+        ),
+
+    path(
+        'service-worker.js', 
+        views.service_worker, 
+        name='service_worker'
+        ),
 
 ]
