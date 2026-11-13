@@ -1,273 +1,71 @@
 {% extends 'game/base2.html' %}
-
+{% load static %}
 {% block content %}
-
-<section
-    style="
-    text-align:center;
-    ">
-
-    <p
-        style="
-        color:#7bd4ff;
-        letter-spacing:8px;
-        text-transform:uppercase;
-        font-size:.9rem;
-        font-weight:600;
-        ">
-
-        GUÍA DEL EXPLORADOR
-
-    </p>
-
-    <h1
-        style="
-        font-size:clamp(3rem,7vw,6rem);
-        margin-bottom:30px;
-        ">
-
-        APRENDE A SOBREVIVIR
-        EN PRIMAL ECHO
-
-    </h1>
-
-    <p
-        style="
-        max-width:900px;
-        margin:auto;
-        line-height:2;
-        font-size:1.2rem;
-        color:#c7d0db;
-        ">
-
-        El mundo ha cambiado.
-        La naturaleza domina las antiguas ciudades
-        y las máquinas continúan operando siglos
-        después del colapso.
-
-    </p>
-
+<header class="echo-section">
+<p class="echo-eyebrow">GUÍA DEL EXPLORADOR</p>
+<h1>Aprende el ritmo del eco.</h1>
+<p class="echo-lead">Controles documentados para la versión de Unity. La PWA es una guía del proyecto; no incluye una versión jugable web.</p>
+</header>
+<section class="echo-card">
+<h2>Teclado y mando</h2>
+<div class="echo-table-wrap">
+<table class="echo-table">
+<caption>Controles del juego</caption>
+<thead>
+<tr>
+<th scope="col">Acción</th>
+<th scope="col">Teclado / ratón</th>
+<th scope="col">Xbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Moverse / dirigir</th>
+<td>A/D o flechas</td>
+<td>Stick / cruceta</td>
+</tr>
+<tr>
+<th scope="row">Salto y doble salto</th>
+<td>Espacio</td>
+<td>A</td>
+</tr>
+<tr>
+<th scope="row">Lanza / pogo</th>
+<td>J / Z / clic izquierdo; abajo en el aire para pogo</td>
+<td>X</td>
+</tr>
+<tr>
+<th scope="row">Dash</th>
+<td>Shift / C</td>
+<td>RB / RT</td>
+</tr>
+<tr>
+<th scope="row">Arco</th>
+<td>K / X / clic derecho</td>
+<td>Y</td>
+</tr>
+<tr>
+<th scope="row">Fijar apuntado</th>
+<td>Ctrl + dirección</td>
+<td>LT + dirección</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>El README también enumera bloqueo con L/F o LB. Se encontró su animación, pero no una reducción de daño asociada en el sistema de vida: no lo tomes aún como defensa confirmada.</p>
 </section>
-
-<br><br><br><br>
-
-<section>
-
-    <p
-        style="
-        color:#7bd4ff;
-        letter-spacing:8px;
-        text-transform:uppercase;
-        ">
-
-        01 — OBJETIVO
-
-    </p>
-
-    <h2>
-
-        DESCUBRE LA VERDAD SOBRE NÉMESIS
-
-    </h2>
-
-    <br>
-
-    <p>
-
-        Explora el mundo, encuentra información
-        perdida y descubre qué ocurrió tras la caída
-        de la civilización humana.
-
-    </p>
-
+<section class="echo-section echo-grid">
+<article class="echo-card">
+<h2>Busca las farolas</h2>
+<p>Al quedarte sin vida vuelves al último checkpoint con la vida llena. Los peligros pueden devolverte al suelo seguro con pérdida de vida.</p>
+</article>
+<article class="echo-card">
+<h2>Controla la distancia</h2>
+<p>Kael se detiene mientras tensa y suelta el arco. Anticipa la embestida de los robots y usa la lanza para atacar cerca.</p>
+</article>
+<article class="echo-card">
+<h2>Explora las alturas</h2>
+<p>Combina doble salto y dash. Los géiseres impulsan a Kael; las piedras quebradizas exigen moverse rápido. Los fragmentos de eco son opcionales.</p>
+</article>
 </section>
-
-<br><br><br>
-
-<section>
-
-    <p
-        style="
-        color:#7bd4ff;
-        letter-spacing:8px;
-        text-transform:uppercase;
-        ">
-
-        02 — EXPLORACIÓN
-
-    </p>
-
-    <h2>
-
-        CADA RUINA OCULTA UNA HISTORIA
-
-    </h2>
-
-    <br>
-
-    <p>
-
-        Recorre bosques gigantes,
-        estructuras tecnológicas abandonadas,
-        laboratorios ocultos y ciudades consumidas
-        por la naturaleza.
-
-    </p>
-
-</section>
-
-<br><br><br>
-
-<section>
-
-    <p
-        style="
-        color:#7bd4ff;
-        letter-spacing:8px;
-        text-transform:uppercase;
-        ">
-
-        03 — COMBATE
-
-    </p>
-
-    <h2>
-
-        ENFRÉNTATE A MÁQUINAS HOSTILES
-
-    </h2>
-
-    <br>
-
-    <p>
-
-        Cada enemigo tiene patrones de ataque,
-        puntos débiles y comportamientos únicos.
-
-        Aprende a observarlos y utiliza el
-        equipamiento adecuado para sobrevivir.
-
-    </p>
-
-</section>
-
-<br><br><br>
-
-<section>
-
-    <p
-        style="
-        color:#7bd4ff;
-        letter-spacing:8px;
-        text-transform:uppercase;
-        ">
-
-        04 — RECURSOS
-
-    </p>
-
-    <h2>
-
-        MEJORA TU EQUIPO
-
-    </h2>
-
-    <br>
-
-    <p>
-
-        Recolecta materiales, componentes
-        tecnológicos y recursos especiales para
-        desbloquear nuevas herramientas y mejoras.
-
-    </p>
-
-</section>
-
-<br><br><br>
-
-<section>
-
-    <p
-        style="
-        color:#7bd4ff;
-        letter-spacing:8px;
-        text-transform:uppercase;
-        ">
-
-        05 — CONTROLES
-
-    </p>
-
-    <h2>
-
-        CONTROLES BÁSICOS
-
-    </h2>
-
-    <br>
-
-    <p>
-
-        W A S D → Movimiento
-
-        <br><br>
-
-        ESPACIO → Saltar
-
-        <br><br>
-
-        CLIC IZQUIERDO → Atacar
-
-        <br><br>
-
-        E → Interactuar
-
-    </p>
-
-</section>
-
-<br><br><br>
-
-<section>
-
-    <p
-        style="
-        color:#7bd4ff;
-        letter-spacing:8px;
-        text-transform:uppercase;
-        ">
-
-        06 — CONSEJOS
-
-    </p>
-
-    <h2>
-
-        PIENSA COMO UN EXPLORADOR
-
-    </h2>
-
-    <br>
-
-    <p>
-
-        No ignores estructuras antiguas.
-
-        <br><br>
-
-        Mejora tu equipo constantemente.
-
-        <br><br>
-
-        Observa el comportamiento de los enemigos.
-
-        <br><br>
-
-        Utiliza a Kiro para localizar recursos ocultos.
-
-    </p>
-
-</section>
-
 {% endblock %}

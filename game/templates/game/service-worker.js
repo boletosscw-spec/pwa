@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'primal-echo-v3';
+const CACHE_NAME = 'primal-echo-v4';
 const OFFLINE_URL = '/offline/';
 const OFFLINE_IMAGE = '/static/game/img/offlinesinfondo.png';
 
@@ -21,7 +21,7 @@ self.addEventListener('activate', event => {
         caches.keys().then(keys => {
             return Promise.all(
                 keys
-                    .filter(key => key !== CACHE_NAME)
+                    .filter(key => key.startsWith('primal-echo-') && key !== CACHE_NAME)
                     .map(key => caches.delete(key))
             );
         }).then(() => self.clients.claim())

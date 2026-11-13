@@ -1,4 +1,5 @@
-```html
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -226,6 +227,7 @@
 
     </style>
 
+<link rel="stylesheet" href="{% static 'game/progreso.css' %}">
 </head>
 
 <body>
@@ -246,7 +248,7 @@
         <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#menu">
+                data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
 
             <span class="navbar-toggler-icon"></span>
 
@@ -588,4 +590,3 @@
 </body>
 
 </html>
-```
