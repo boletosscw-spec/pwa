@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,9 +7,7 @@
     <title>Sin conexión | Primal Echo</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -33,20 +31,15 @@
             box-shadow: 0 0 30px rgba(0, 200, 255, .12);
         }
 
-        .offline-icon {
-            font-size: 65px;
+        .offline-image {
+            width: 400px;
+            height: 100%;
             margin-bottom: 20px;
+            border-radius: 16px;
         }
 
-        h1 {
-            color: #7bd4ff;
-            margin-bottom: 15px;
-        }
-
-        p {
-            color: #c5d4e3;
-            line-height: 1.6;
-        }
+        h1 { color: #7bd4ff; margin-bottom: 15px; }
+        p { color: #c5d4e3; line-height: 1.6; }
 
         button {
             margin-top: 20px;
@@ -59,35 +52,20 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background: #7bd4ff;
-        }
+        button:hover { background: #7bd4ff; }
     </style>
 </head>
 
 <body>
-
     <div class="offline-container">
-
-        <div class="offline-icon">📡</div>
+        <img src="{% static 'game/img/offlinesinfondo.png' %}" alt="Sin conexión" class="offline-image">
 
         <h1>¡Señal perdida!</h1>
 
-        <p>
-            Parece que has perdido tu conexión a internet.
-            El mundo de Primal Echo no está disponible
-            en este momento.
-        </p>
+        <p> Parece que has perdido tu conexión a internet. </p>
+        <p> Comprueba tu conexión e intenta nuevamente. </p>
 
-        <p>
-            Comprueba tu conexión e intenta nuevamente.
-        </p>
-
-        <button onclick="location.reload()">
-            REINTENTAR CONEXIÓN
-        </button>
-
+        <button onclick="location.reload()">REINTENTAR CONEXIÓN</button>
     </div>
-
 </body>
 </html>
