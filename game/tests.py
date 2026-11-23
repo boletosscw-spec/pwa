@@ -31,7 +31,7 @@ class GamePortalTests(TestCase):
             with self.subTest(path=path):
                 response = self.client.get(path)
                 self.assertEqual(response.status_code, 200)
-                self.assertContains(response, 'echo.css?v=37')
+                self.assertContains(response, 'echo.css?v=38')
                 self.assertContains(response, 'echo.js?v=36')
                 self.assertContains(response, 'id="mobile-menu"')
                 self.assertContains(response, 'id="loginModal"')
@@ -101,12 +101,14 @@ class GamePortalTests(TestCase):
         self.assertEqual(manifest['display'], 'standalone')
         for icon in manifest['icons']:
             self.assertTrue((root / icon['src'].removeprefix('/static/')).is_file())
-        self.assertEqual(self.client.get('/offline/').status_code, 200)
-        self.check_resources(self.client.get('/offline/'))
+        offline = self.client.get('/offline/')
+        self.assertContains(offline, 'Mando Xbox')
+        self.assertContains(offline, 'Salto y doble salto')
+        self.check_resources(offline)
         worker = self.client.get('/service-worker.js')
         self.assertEqual(worker['Content-Type'], 'application/javascript')
         self.assertEqual(worker['Service-Worker-Allowed'], '/')
-        self.assertContains(worker, 'primal-echo-v37')
+        self.assertContains(worker, 'primal-echo-v38')
         self.assertContains(worker, "request.method !== 'GET'")
 
     def test_entrance_webp_assets_exist(self):

@@ -96,3 +96,5 @@ html{scroll-padding-top:0}.story-scene,.guardian-scene{scroll-margin-top:var(--h
 .kael-replay{display:block;margin:8px auto 0;padding:4px 0;border:0;border-bottom:1px solid var(--accent);background:none;color:var(--accent);font:inherit;cursor:pointer}
 .kael-replay[hidden]{display:none}
 @media(min-width:1000px){.kael-replay{margin-left:0}}
+
+.offline-controls{width:100%;max-width:640px;text-align:left}

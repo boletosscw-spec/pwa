@@ -1,1 +1,23 @@
-{% load static %}<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#06121c"><title>Sin conexión · Primal Echo</title><link rel="stylesheet" href="{% static 'game/echo.css' %}?v=37"></head><body><main class="offline-scene"><img src="{% static 'game/art/icon-192.png' %}" alt="Kael" width="128" height="128"><span class="eyebrow">EL CAMINO SIGUE AQUÍ</span><h1>Un momento<br>entre las ruinas.</h1><p>No hay conexión. Vuelve a intentarlo cuando recuperes la señal.</p><a class="button" href="/">Volver a explorar</a></main></body></html>
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#06121c">
+  <title>Sin conexión · Primal Echo</title>
+  <link rel="stylesheet" href="{% static 'game/echo.css' %}?v=38">
+  <script src="{% static 'game/echo.js' %}?v=36" defer></script>
+</head>
+<body>
+  <main class="offline-scene">
+    <img src="{% static 'game/art/icon-192.png' %}" alt="Kael" width="128" height="128">
+    <h1>Sin conexión</h1>
+    <p>Consulta los controles del juego mientras recuperas la señal.</p>
+    <section class="offline-controls" aria-label="Controles del juego">
+      {% include 'game/controles.html' %}
+    </section>
+    <a class="button" href="{% url 'inicio' %}">Volver a explorar</a>
+  </main>
+</body>
+</html>
