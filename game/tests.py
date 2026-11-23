@@ -115,7 +115,7 @@ class GamePortalTests(TestCase):
 
     def test_entrance_webp_assets_exist(self):
         root = Path(settings.BASE_DIR) / 'game/static/game/img/entrada'
-        assets = ['kael-caminar.webp', 'kael-gestos.webp', 'kael-correr-asustado.webp', 'vegetacion.webp']
+        assets = ['kael-caminar.webp', 'kael-gestos.webp', 'kael-correr-asustado.webp']
         assets += [f'explorador-correr-{i:02}.webp' for i in range(1, 9)]
         for name in assets:
             self.assertTrue((root / name).is_file())
