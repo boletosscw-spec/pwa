@@ -2,3 +2,4 @@
 __pycache__/
 staticfiles/
 .secret_key
+db.sqlite3

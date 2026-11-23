@@ -1,56 +1,7 @@
-{% extends 'game/base2.html' %}
-{% load static %}
-{% block content %}
-<header class="echo-section">
-<p class="echo-eyebrow">HABITANTES / ARCHIVO DEL MUNDO</p>
-<h1>Entre lo vivo y la máquina.</h1>
-<p class="echo-lead">Personajes, enemigos y arte con su estado de integración.</p>
-</header>
-<section class="echo-grid">
-<article class="echo-card">
-<img class="echo-portrait" src="{% static 'game/img/kaelSinFondo.png' %}" alt="Ilustración de Kael">
-<span class="echo-tag">Personaje con controlador y animaciones</span>
-<h2>Kael</h2>
-<p>Protagonista de Primal Echo. Su movimiento, vida, lanza y arco están presentes en el proyecto.</p>
-</article>
-<article class="echo-card">
-<span class="echo-tag echo-tag-amber">Premisa narrativa</span>
-<h2>NÉMESIS</h2>
-<p>La IA que decidió eliminar a la humanidad para salvar la Tierra. Da nombre al segundo nivel; no se ha confirmado una batalla final contra ella.</p>
-</article>
-</section>
-<section class="echo-section">
-<h2>Amenazas con lógica de juego</h2>
-<div class="echo-grid">
-<article class="echo-card">
-<img class="echo-pixel" src="{% static 'game/img/desarrollo/centinela.png' %}" alt="Sprite de centinela">
-<h3>Robots centinelas y pesados</h3>
-<p>Patrullan, persiguen, preparan una embestida y retroceden. Los mapas distinguen versiones normales y pesadas.</p>
-</article>
-<article class="echo-card">
-<img class="echo-pixel" src="{% static 'game/img/desarrollo/planta.png' %}" alt="Sprite de planta carnívora">
-<h3>Naturaleza hostil</h3>
-<p>El proyecto contiene comportamientos para plantas carnívoras y avispas voladoras, además de espinas y otros peligros.</p>
-</article>
-</div>
-</section>
-<section class="echo-section">
-<p class="echo-eyebrow">GALERÍA CONCEPTUAL DE LA PWA</p>
-<h2>Un universo por integrar</h2>
-<p>Kiro, Nara y los dinosaurios ilustrados ya formaban parte del archivo visual de esta web. No se encontró lógica de juego que confirme compañeros, diálogos o jefes jugables para ellos.</p>
-<div class="echo-grid echo-gallery">
-<figure class="echo-card">
-<img class="echo-portrait" src="{% static 'game/img/kiroSinFondo.png' %}" alt="Arte conceptual de Kiro" loading="lazy">
-<figcaption>Kiro · ilustración existente</figcaption>
-</figure>
-<figure class="echo-card">
-<img class="echo-portrait" src="{% static 'game/img/Nara.png' %}" alt="Arte conceptual de Nara" loading="lazy">
-<figcaption>Nara · ilustración existente</figcaption>
-</figure>
-<figure class="echo-card">
-<img class="echo-portrait" src="{% static 'game/img/rexboosFase1sinfondo.png' %}" alt="Arte conceptual de Rex" loading="lazy">
-<figcaption>Rex · diseño conceptual de jefe</figcaption>
-</figure>
-</div>
-</section>
-{% endblock %}
+{% extends 'game/base.html' %}{% load static %}{% block title %}Personajes · Primal Echo{% endblock %}{% block content %}
+<header class="page-hero"><img src="{% static 'game/art/companeros-pixel-web.webp' %}" alt="Kael y Kiro juntos frente a las ruinas" width="1672" height="941" fetchpriority="high"><div><span class="eyebrow">HABITANTES DE PRIMAL ECHO</span><h1>Un compañero.<br>Un mundo por descubrir.</h1><p>Entre las ruinas hay encuentros que cambian el viaje. Otros pondrán a prueba cada paso.</p></div></header>
+<section class="section-wrap character-duo"><div class="character-portrait reveal"><img src="{% static 'game/img/actual/kael.webp' %}" alt="Kael, con cabello castaño, camisa naranja y brazalete cian" width="576" height="544"></div><div class="character-copy reveal"><span class="eyebrow">EL EXPLORADOR</span><h2>Kael</h2><p>Acostumbrado a buscar recursos entre los restos de la antigua civilización, Kael conoce los peligros del territorio. Pero el ataque a su comunidad lo lleva mucho más lejos de lo que esperaba.</p><p>Con una lanza, un arco y preguntas sin resolver, sigue las pistas hacia las antiguas instalaciones.</p><a class="editorial-link" href="/como-jugar/">Aprende a moverte con Kael ↗</a></div></section>
+<section class="story-scene"><img src="{% static 'game/art/companeros-pixel-web.webp' %}" alt="Kiro y Kael comparten un momento en el camino" width="1672" height="941" loading="lazy"><div class="story-copy reveal"><span class="eyebrow">EL COMPAÑERO</span><h2>Kiro</h2><p>Pequeño, biomecánico y lleno de gestos. Kiro acompaña a Kael y se comunica con sonidos, movimientos y pequeñas señales luminosas.</p><p>Para conocerlo mejor, tendrás que recorrer el camino juntos.</p>{% include 'game/kiro_tip.html' with tip='Algunos encuentros merecen descubrirse jugando.' %}</div></section>
+<section class="section-wrap" id="criaturas"><div class="section-heading reveal"><div><span class="eyebrow">LAS CRIATURAS</span><h2>No bajes<br>la guardia.</h2></div><p>Vigilan desde el suelo y el aire. Observa sus señales antes de elegir tu siguiente movimiento.</p></div><div class="roster"><article class="creature-card reveal"><div class="creature-visual creature-single"><img src="{% static 'game/img/actual/explorador.webp' %}" alt="Explorador" width="640" height="380" loading="lazy"></div><span class="eyebrow">CUERNOS Y CORAZA</span><h3>Explorador</h3><p>Embiste y barre con la cola. Su variante élite resiste más y puede encadenar embestidas.</p></article><article class="creature-card reveal"><div class="creature-visual"><img src="{% static 'game/img/actual/ala-cian.webp' %}" alt="Ala Cian" width="768" height="128" loading="lazy"></div><span class="eyebrow">ATAQUE A DISTANCIA</span><h3>Ala Cian</h3><p>Anticipa el movimiento de Kael al disparar y busca una nueva posición.</p></article><article class="creature-card reveal"><div class="creature-visual"><img src="{% static 'game/img/actual/ala-ambar.webp' %}" alt="Ala Ámbar" width="768" height="128" loading="lazy"></div><span class="eyebrow">ATAQUE EN PICADA</span><h3>Ala Ámbar</h3><p>Ronda desde las alturas, se lanza hacia Kael y se retira.</p></article></div>{% include 'game/kiro_tip.html' with tip='No todas las criaturas atacan de la misma manera.' %}</section>
+<section class="guardian-scene"><picture class="guardian-art"><source media="(max-width: 999px)" srcset="{% static 'game/art/rex-cinematic-tall.webp' %}"><img src="{% static 'game/art/rex-cinematic-wide.webp' %}" alt="Kael tensa el arco en primer plano mientras Rex avanza entre ruinas y vegetación iluminadas por el sol" width="1672" height="941" loading="lazy"></picture><div class="guardian-copy reveal"><span class="eyebrow">UNA AMENAZA ENTRE LAS RUINAS</span><h2>Centinela Rex</h2><p>Sus mordidas, embestidas y coletazos no dejan espacio al descuido. Cuando pierde la mitad de su vida, entra en furia y reduce sus pausas.</p><a class="editorial-link" href="/como-jugar/#supervivencia">Prepárate para el encuentro ↗</a></div></section>
+<section class="section-wrap news-spotlight"><img src="{% static 'game/art/instalaciones-pixel-web.webp' %}" alt="Un pasillo tecnológico entre sombras" width="1672" height="941" loading="lazy"><div class="reveal"><span class="eyebrow">UN NOMBRE ENTRE LOS VESTIGIOS</span><h2>NÉMESIS</h2><p>¿Qué fue NÉMESIS? ¿Qué relación tiene con lo que ocurre fuera de las instalaciones? Las respuestas forman parte del viaje.</p><p>Descúbrelas jugando.</p></div></section>{% endblock %}

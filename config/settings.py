@@ -26,15 +26,21 @@ SECRET_KEY = 'django-insecure-%uq+8$c5%9^ftj*3xg+5a%vdc-ndgohga=+y=h9)k1g0i*0jzu
 _clave = BASE_DIR / '.secret_key'
 if _clave.exists():
     SECRET_KEY = _clave.read_text().strip()
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '1') == '1'
 
-ALLOWED_HOSTS = ['*']
+_public_domain = os.environ.get('RAILWAY_PUBLIC_DOMAIN')
+ALLOWED_HOSTS = [_public_domain, 'localhost', '127.0.0.1'] if _public_domain else ['*']
 
 # Publicado detras de un tunel HTTPS (Cloudflare): confiar en su cabecera de protocolo
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CSRF_TRUSTED_ORIGINS = ['https://*.trycloudflare.com']
+if _public_domain:
+    CSRF_TRUSTED_ORIGINS.append(f'https://{_public_domain}')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 
 # Application definition
@@ -89,7 +95,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.environ.get('DJANGO_SQLITE_PATH') or BASE_DIR / 'db.sqlite3',
     }
 }
 

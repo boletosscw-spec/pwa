@@ -1,0 +1,14 @@
+**
+!requirements.txt
+!manage.py
+!config/
+!config/**
+!accounts/
+!accounts/**
+!game/
+!game/**
+!landing/
+!landing/**
+!news/
+!news/**
+**/__pycache__/

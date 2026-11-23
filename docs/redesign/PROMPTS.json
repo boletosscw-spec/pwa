@@ -1,0 +1,79 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "hero-wide",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-dbc41a4b-7af4-411e-a553-bdbfdc3400aa.png"
+    },
+    {
+      "name": "hero-tall",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-db027090-7f8a-4447-902c-8a1af360388f.png"
+    },
+    {
+      "name": "valle",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-ae9a62e5-cedb-4087-84a7-881ff78c54be.png"
+    },
+    {
+      "name": "instalaciones",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-e3e008fb-2ccc-4ab7-b26e-2a2f3597c4f6.png"
+    },
+    {
+      "name": "rex-art",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-efa9e10a-1a0b-4fe4-9a40-7a1dc9aaa8b4.png"
+    },
+    {
+      "name": "companeros",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-91fbd330-b635-4128-8218-cbde873c641b.png"
+    },
+    {
+      "name": "parallax-sky",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-4dbbc8e6-6050-45e8-803e-39104aa9b6c3.png"
+    },
+    {
+      "name": "parallax-ruins",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-f750c7f6-2173-49cc-8624-d47259286d3c.png"
+    },
+    {
+      "name": "parallax-front",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-1662501d-ec03-4638-b56e-5aea6f97a47a.png"
+    }
+  ],
+  "prompts": [
+    [
+      "hero-wide",
+      "Original promotional key art for Primal Echo, widescreen 16:9. Painted atmospheric 2D adventure illustration, NOT screenshot, NO TEXT. Use reference Kael character identity: young boy messy chestnut hair orange shirt brown backpack cyan wrist bracelet, spear and bow. Tiny rear-facing Kael in lower right on a root bridge facing a colossal abandoned technological installation swallowed by jungle, monumental angular doorway and ancient machinery, NOT a religious temple. Brilliant restrained cyan light from the entrance. Vast scale, layered blue night fog, deep navy and desaturated forest greens, shafts of cyan light, near-black foreground vines framing both sides, hand painted gouache textures, cinematic negative space in upper left for website title. Original world and shapes, no characters or icons from other games."
+    ],
+    [
+      "hero-tall",
+      "Original Primal Echo promotional painting, vertical 9:16 composition. Reference character identity Kael, young boy messy chestnut hair orange shirt backpack luminous cyan wrist bracelet with spear and bow. Small rear-facing figure in lower third on ruined platform. Huge abandoned technological jungle installation rising above him through blue mist, cyan doorway in distant center, broken metal structures covered with vines. Moody painted 2D adventure key art, huge sense of scale, layered navy fog, turquoise accent only, dim foliage silhouette at sides. Upper third dark blue quiet space for website logo. NO words or letters. No religious architecture or borrowed game elements."
+    ],
+    [
+      "valle",
+      "Original Primal Echo location key art horizontal 16:9, hand painted atmospheric 2D metroidvania promotional illustration. Valle del Eco: enormous blue lagoon in an overgrown forgotten technological landscape, waterfalls from tall rocky cliffs, skeletal remains of old platforms overgrown by jungle, ancient cyan lamps on ruins. Tiny Kael on a rock in lower left, brown messy hair orange shirt backpack spear bow and cyan wrist bracelet, identity from reference. Deep blue shadows, desaturated evergreen foliage, luminous cyan reflections, fog, delicate shafts of light, painterly illustrated detail. No text, no logos, no copied game elements."
+    ],
+    [
+      "instalaciones",
+      "Use case stylized-concept. Original Primal Echo promotional environment art, horizontal 16:9. Abandoned technological installation deep under jungle ruins, corridor of aged stone and industrial metal with ancient machinery, cyan circuit grooves and cold small lights. A mechanical creature barely visible in the shadows, no red lights. Deep navy blue palette with single luminous turquoise accent, layered volumetric mist, painterly 2D hand-painted adventure art. Enormous corridor, beautiful perspective, mystery and depth. No human characters needed. No text, no logos, no religious iconography, no borrowed game elements."
+    ],
+    [
+      "rex-art",
+      "Original Primal Echo promotional boss encounter painting, horizontal 16:9. Colossal Centinela Rex looming menacingly over small Kael, rear view. Rex is a massive biomechanical tyrannosaurus made of pale fossil bone armor and dark ancient machinery, cyan eyes and faint cyan seams, huge jaws, grounded believable legs. Kael is the reference young boy with brown messy hair orange shirt backpack cyan wrist bracelet spear and bow. Overgrown technological ruins, deep navy mist, dramatic turquoise backlight, painterly atmospheric 2D game key art, strong scale contrast, dangerous but not gory. No text or logos, no other game characters."
+    ],
+    [
+      "companeros",
+      "Original Primal Echo story promotional illustration horizontal 16:9. Kael and Kiro together looking toward ruined technological structures disappearing into a vast blue jungle. Kael per reference young boy tousled chestnut hair orange shirt brown backpack cyan wrist bracelet, spear and bow. Kiro MUST match the last creature at the far right of second reference: tiny quadruped biomechanical creature with pale bone plates, four little legs, short tail, small horned dinosaur-like head, friendly cyan circular eye and cyan round joints. Do not draw Kiro as a floating orb or human. Rear three-quarter silhouettes, characters small in lower foreground, intimate companionship amid immense world. Hand painted gouache atmospheric 2D adventure art, layered navy fog, single luminous cyan accent, dim desaturated greenery, shafts of light. No text or logos."
+    ],
+    [
+      "parallax-sky",
+      "Original Primal Echo parallax BACKGROUND LAYER ONLY, horizontal16:9 painted game art. Vast midnight navy sky with diffuse blue atmospheric mist, soft distant cyan light shaft from upper right, barely visible distant jungle mountain silhouettes at bottom fifth. Dark and restrained, no stars clutter, no moon, no characters, no foreground, no text. Hand-painted 2D moody adventure style. Full opaque background."
+    ],
+    [
+      "parallax-ruins",
+      "Original Primal Echo parallax MIDDLE LAYER ONLY on truly transparent background, horizontal16:9 canvas. Distant colossal angular abandoned technological installation overgrown with jungle roots, jagged mountain silhouette, low horizon in bottom half, a tiny cyan glowing entrance in center-right. Layered painterly navy blue mountain and ruins shapes, cyan haze along contours. Upper half and gaps genuinely transparent. No sky, no characters, no text. Hand painted 2D atmospheric adventure environment cutout designed to overlay blue misty sky."
+    ],
+    [
+      "parallax-front",
+      "Original Primal Echo parallax FOREGROUND LAYER ONLY, truly transparent background, horizontal16:9. Hand painted very dark navy near-black jungle foliage, hanging vines from top corners, large fern silhouettes and roots along lower edge, central 70 percent fully transparent to look through toward distant scene. Intricate organic silhouettes with restrained cool cyan rim lighting. No sky or mountains, no buildings, no characters, no text. Original atmospheric 2D game promotional environment border, no rectangular frame."
+    ]
+  ]
+}

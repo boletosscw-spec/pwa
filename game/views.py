@@ -61,9 +61,6 @@ def inicio2(request):
 
 def novedades(request):
 
-    if not request.session.get("logueado"):
-        return redirect("/")
-
     return render(
         request,
         'game/novedades.html',
@@ -75,9 +72,6 @@ def novedades(request):
 
 def personajes(request):
 
-    if not request.session.get("logueado"):
-        return redirect("/")
-
     return render(
         request,
         'game/personajes.html',
@@ -88,9 +82,6 @@ def personajes(request):
 
 
 def como_jugar(request):
-
-    if not request.session.get("logueado"):
-        return redirect("/")
 
     return render(
         request,

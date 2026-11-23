@@ -1,0 +1,55 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "hero-wide-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-bda46a3d-6672-4359-9cbd-495b93c8ef0f.png",
+      "prompt": "Use case: style-transfer. Recreate this Primal Echo reference as AUTHENTIC CRISP PIXEL ART, 16:9 landscape. Remove the human character completely: no Kael or Kiro or silhouettes anywhere. Keep the technological jungle installation, cyan doorway, monumental scale and open dark left area for title. Deliberate visible square pixel clusters, stepped silhouettes, discrete limited blue/teal/evergreen color palette, 3–4 hard shade values per material, dithering in layered mist and cyan light shafts. Think a beautifully crafted 480x270-style 2D pixel game landscape enlarged with nearest-neighbor pixels. This must LOOK pixelated, not a smooth painting with a texture. No anti-aliasing, no smooth gradients, no soft brushstrokes, no blur, no 3D render. Preserve atmosphere and original architecture. No text or logos. Abandoned technological facilities, not religious temples."
+    },
+    {
+      "name": "hero-tall-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-351b8fe8-f42d-4ca4-a436-396ed6f4e44a.png",
+      "prompt": "Use case: style-transfer. Recreate this Primal Echo reference as AUTHENTIC CRISP PIXEL ART, 9:16 portrait mobile. Remove Kael completely from the foreground platform: empty platform, no people, no Kiro or silhouettes. Keep the giant technological ruins, doorway and layered vegetation. Upper third dark calm space for title. Deliberate visible square pixel clusters, stepped silhouettes, discrete limited blue/teal/evergreen color palette, 3–4 hard shade values per material, dithering in layered mist and cyan light shafts. Think a beautifully crafted 480x270-style 2D pixel game landscape enlarged with nearest-neighbor pixels. This must LOOK pixelated, not a smooth painting with a texture. No anti-aliasing, no smooth gradients, no soft brushstrokes, no blur, no 3D render. Preserve atmosphere and original architecture. No text or logos. Abandoned technological facilities, not religious temples."
+    },
+    {
+      "name": "valle-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-84b17845-1979-4aec-80b4-1f91a5ef86f4.png",
+      "prompt": "Use case: style-transfer. Recreate this Primal Echo reference as AUTHENTIC CRISP PIXEL ART, 16:9 landscape. Preserve lagoon, cliffs, waterfalls and overgrown technological ruins. A tiny Kael can remain on the left rock, but scenery is dominant. Deliberate visible square pixel clusters, stepped silhouettes, discrete limited blue/teal/evergreen color palette, 3–4 hard shade values per material, dithering in layered mist and cyan light shafts. Think a beautifully crafted 480x270-style 2D pixel game landscape enlarged with nearest-neighbor pixels. This must LOOK pixelated, not a smooth painting with a texture. No anti-aliasing, no smooth gradients, no soft brushstrokes, no blur, no 3D render. Preserve atmosphere and original architecture. No text or logos. Abandoned technological facilities, not religious temples."
+    },
+    {
+      "name": "claro-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-66db077a-6589-40fb-8433-6b8638488627.png",
+      "prompt": "Use case: style-transfer. Transform the reference Primal Echo promotional scene to REAL CRISP PIXEL ART, horizontal16:9. Preserve the sheltered jungle clearing, root-covered platforms, little cyan lantern and quiet beginning. Tiny Kael in the distance is permitted. Hand-placed-looking square pixel clusters, jagged stepped edges, limited navy, blue, desaturated green and cyan palette, 3–4 discrete shade values per surface, dithering for mist. Render with visible 480x270-resolution style pixel structure enlarged, not smooth digital painting. No anti-aliasing or photographic blur. No smooth gradients, soft painting, brushwork or 3D rendering. Atmospheric layers and depth must be built out of pixel shapes. No text, no logos, no borrowed game characters."
+    },
+    {
+      "name": "instalaciones-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-4fca256e-6185-4db6-9ef0-602c4317dab9.png",
+      "prompt": "Use case: style-transfer. Transform the reference Primal Echo promotional scene to REAL CRISP PIXEL ART, horizontal16:9. Preserve the dark technological corridor with cyan circuit grooves and machinery in shadow. No humans. Hand-placed-looking square pixel clusters, jagged stepped edges, limited navy, blue, desaturated green and cyan palette, 3–4 discrete shade values per surface, dithering for mist. Render with visible 480x270-resolution style pixel structure enlarged, not smooth digital painting. No anti-aliasing or photographic blur. No smooth gradients, soft painting, brushwork or 3D rendering. Atmospheric layers and depth must be built out of pixel shapes. No text, no logos, no borrowed game characters."
+    },
+    {
+      "name": "companeros-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-e1f9c0fb-3618-4c65-8204-35c46792611a.png",
+      "prompt": "Use case: style-transfer. Transform the reference Primal Echo promotional scene to REAL CRISP PIXEL ART, horizontal16:9. Preserve exactly Kael and Kiro together in lower left and vast ruins beyond. Keep Kael chestnut hair, orange shirt, backpack, cyan bracelet, spear and bow. Kiro remains a small ivory-armored quadruped with cyan eye and mechanical joints. Hand-placed-looking square pixel clusters, jagged stepped edges, limited navy, blue, desaturated green and cyan palette, 3–4 discrete shade values per surface, dithering for mist. Render with visible 480x270-resolution style pixel structure enlarged, not smooth digital painting. No anti-aliasing or photographic blur. No smooth gradients, soft painting, brushwork or 3D rendering. Atmospheric layers and depth must be built out of pixel shapes. No text, no logos, no borrowed game characters."
+    },
+    {
+      "name": "sky-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-2b016bd2-9ca1-4ab9-8588-00757ea264e9.png",
+      "prompt": "Use case: style-transfer. Primal Echo parallax layer horizontal16:9, STRICT authentic pixel art. BACKGROUND sky layer, opaque. Midnight blue misty sky and distant mountain silhouettes. No characters. Recreate reference silhouette layout with deliberate large square pixel clusters, stepped contours, restricted 3-tone blue/teal palette and hard shadow edges. Pixels must be visible at web viewing size, crafted 480x270 game-art look, not a painting. No smooth gradients, blurry fog, anti-aliasing, brush texture or 3D. Cyan accent only. No text."
+    },
+    {
+      "name": "ruins-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-211385d1-92d5-4bba-b605-2178df50d852.png",
+      "prompt": "Use case: style-transfer. Primal Echo parallax layer horizontal16:9, STRICT authentic pixel art. MIDDLE layer on genuine transparent background. Technological ruins and distant jungle mountains along lower half, tiny cyan doorway, preserve empty transparent upper half and gaps. No sky or characters. Recreate reference silhouette layout with deliberate large square pixel clusters, stepped contours, restricted 3-tone blue/teal palette and hard shadow edges. Pixels must be visible at web viewing size, crafted 480x270 game-art look, not a painting. No smooth gradients, blurry fog, anti-aliasing, brush texture or 3D. Cyan accent only. No text."
+    },
+    {
+      "name": "front-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-ea87ba73-f8ef-4af8-9fb5-925679e955c0.png",
+      "prompt": "Use case: style-transfer. Primal Echo parallax layer horizontal16:9, STRICT authentic pixel art. FOREGROUND layer on genuine transparent background. Near-black navy pixel vines and ferns around edges, middle70% fully transparent. No landscape, buildings or characters. Recreate reference silhouette layout with deliberate large square pixel clusters, stepped contours, restricted 3-tone blue/teal palette and hard shadow edges. Pixels must be visible at web viewing size, crafted 480x270 game-art look, not a painting. No smooth gradients, blurry fog, anti-aliasing, brush texture or 3D. Cyan accent only. No text."
+    },
+    {
+      "name": "rex-sprite-pixel",
+      "path": "/home/christian/.codex/generated_images/01a1d33e-3866-7563-8e9d-16294b52bf8e/exec-b416fafa-89a0-478d-912b-a3a3ccf92408.png",
+      "prompt": "Use case: identity-preserve. Create a cleaned-up HIGH QUALITY PIXEL ART sprite of the EXACT mechanical Rex shown in the reference, not a redesign. Asset is full-body isolated sprite on genuinely transparent background, landscape 4:3 canvas. Preserve exact side-profile facing RIGHT: long narrow tail to left, forward bent torso, long narrow theropod head, two powerful long digitigrade hind legs with three metallic claws, small tucked forearms. Preserve armor placements and proportions: ivory/off-white angular manufactured plates over charcoal-black mechanical skeleton, orange routing cables and orange triangle on large side shoulder plate, cyan eye, black rectangular backpack/power unit on upper back with square cyan light grid pointing left, thin orange/black antenna cables curving above shoulders. Thin segmented armored tail, small white dorsal plates. DO NOT use rock, fossils, giant bone skull, large dorsal spikes, organic moss, oversized teeth or glowing circles replacing the reference parts. Sharpen readable details and clean contours while retaining this exact character identity, silhouette, equipment, posture, antennae and markings. Deliberate crisp pixel clusters and stepped contours, hard-edged 3–4 shade ramps, no antialiasing, no smooth painting or 3D render, 32-bit game sprite quality. Entire tail tip, antennae, snout and feet inside frame with 8% transparent safety margin. No text, no Kael, no scenery, no floor or shadow."
+    }
+  ]
+}
