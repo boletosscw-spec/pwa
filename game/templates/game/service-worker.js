@@ -1,6 +1,6 @@
-const CACHE_NAME = 'primal-echo-v38';
+const CACHE_NAME = 'primal-echo-v39';
 const OFFLINE_URL = '/offline/';
-const CORE = [OFFLINE_URL, '/static/game/echo.css?v=38', '/static/game/echo.js?v=36', '/static/game/art/icon-192.png', '/static/game/art/icon-512.png'];
+const CORE = [OFFLINE_URL, '/static/game/echo.css?v=39', '/static/game/echo.js?v=39', '/static/game/art/icon-192.png', '/static/game/art/icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
 });

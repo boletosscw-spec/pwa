@@ -31,8 +31,8 @@ class GamePortalTests(TestCase):
             with self.subTest(path=path):
                 response = self.client.get(path)
                 self.assertEqual(response.status_code, 200)
-                self.assertContains(response, 'echo.css?v=38')
-                self.assertContains(response, 'echo.js?v=36')
+                self.assertContains(response, 'echo.css?v=39')
+                self.assertContains(response, 'echo.js?v=39')
                 self.assertContains(response, 'id="mobile-menu"')
                 self.assertContains(response, 'id="loginModal"')
                 self.assertContains(response, 'manifest.webmanifest')
@@ -41,7 +41,9 @@ class GamePortalTests(TestCase):
 
     def test_home_shows_art_skills_levels_and_real_download(self):
         response = self.client.get('/')
-        for text in ['hero-wide-pixel-web.webp', 'hero-tall-pixel-web.webp', 'companeros-pixel-web.webp',
+        for text in ['fondo_noche.webp', 'orn_sup.webp', 'orn_inf.webp',
+                     '<h1 id="portada-titulo">Primal Echo</h1>', 'El mundo despertó',
+                     'companeros-pixel-web.webp', 'Comienza el viaje',
                      'Valle del Eco', 'Claro del Despertar', 'Instalaciones abandonadas',
                      'Doble salto', 'Dash', 'Salto de pared', 'Pogo', 'Arco',
                      'Descargar proyecto', 'Código fuente para Unity 6',
@@ -108,7 +110,7 @@ class GamePortalTests(TestCase):
         worker = self.client.get('/service-worker.js')
         self.assertEqual(worker['Content-Type'], 'application/javascript')
         self.assertEqual(worker['Service-Worker-Allowed'], '/')
-        self.assertContains(worker, 'primal-echo-v38')
+        self.assertContains(worker, 'primal-echo-v39')
         self.assertContains(worker, "request.method !== 'GET'")
 
     def test_entrance_webp_assets_exist(self):

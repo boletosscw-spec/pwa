@@ -61,8 +61,6 @@
       if (rect.bottom > 0) {
         const y = Math.min(130, Math.max(0, -rect.top * .18));
         hero.style.setProperty('--scene-y', `${y}px`);
-        hero.style.setProperty('--ruins-y', `${y * .55}px`);
-        hero.style.setProperty('--front-y', `${y * -.3}px`);
       }
     }
     let active = guideSections[0];

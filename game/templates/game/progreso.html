@@ -1,10 +1,35 @@
 {% load static %}
-<section class="key-hero world-home-hero" id="descargar">
-<picture class="hero-art"><source media="(max-width: 600px)" srcset="{% static 'game/art/hero-tall-pixel-web.webp' %}"><img src="{% static 'game/art/hero-wide-pixel-web.webp' %}" alt="Instalaciones tecnológicas entre la selva y la niebla, sin personajes en el fondo" width="1672" height="941" fetchpriority="high"></picture>
-<div class="parallax-layer ruins-layer" aria-hidden="true"></div><div class="parallax-layer front-layer" aria-hidden="true"></div><div class="hero-fog" aria-hidden="true"></div><div class="spores" aria-hidden="true"></div>
-<div class="hero-content"><span class="eyebrow">UNA AVENTURA ENTRE LO SALVAJE Y LO OLVIDADO</span><h1>{% include 'game/wordmark.html' with mark_class='hero-logo wordmark-hero' %}</h1><p>Un mundo recuperado por la naturaleza.<br>Una verdad que aún te espera.</p><div class="hero-actions"><a class="button" href="https://github.com/boletosscw-spec/Primal-Echo/archive/refs/heads/avances-enemigos-y-cinematicas.zip">Descargar proyecto <span class="button-spark" aria-hidden="true"></span></a><a class="button button-outline" href="/como-jugar/">Comienza el viaje</a></div><span class="fine-print">PC · Código fuente para Unity 6 · En desarrollo</span><button type="button" class="kael-replay" aria-controls="kael-entrance" hidden>Ver animación de Kael</button></div>
-{% include 'game/entrada.html' %}
-<a class="hero-scroll" href="#historia">Adéntrate en el mundo <span aria-hidden="true">↓</span></a><span class="art-caption">Arte promocional de Primal Echo</span>
+<section class="key-hero world-home-hero" id="descargar" aria-labelledby="portada-titulo">
+  <div class="hero-art" aria-hidden="true">
+    <img src="{% static 'game/art/menu/fondo_noche.webp' %}" alt="" width="1672" height="941" fetchpriority="high">
+  </div>
+  <div class="hero-relics" aria-hidden="true">
+    <div class="hero-spear">
+      <img src="{% static 'game/art/menu/lanza.webp' %}" alt="" width="240" height="1140">
+      <img class="hero-spear-glow" src="{% static 'game/art/menu/lanza_brillo.webp' %}" alt="" width="240" height="1140">
+      <img class="hero-amulet" src="{% static 'game/art/menu/amuleto.webp' %}" alt="" width="84" height="240">
+    </div>
+    <img class="hero-sentinel" src="{% static 'game/art/menu/restos.webp' %}" alt="" width="720" height="336">
+  </div>
+  <div class="hero-fog" aria-hidden="true"></div>
+  <div class="spores" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-logo">
+      <img class="hero-ornament hero-ornament-top" src="{% static 'game/art/menu/orn_sup.webp' %}" alt="" width="1000" height="150">
+      <h1 id="portada-titulo">Primal Echo</h1>
+      <img class="hero-ornament hero-ornament-bottom" src="{% static 'game/art/menu/orn_inf.webp' %}" alt="" width="820" height="110">
+    </div>
+    <span class="eyebrow">El mundo despertó</span>
+    <p>Un mundo recuperado por la naturaleza.<br>Una verdad que aún te espera.</p>
+    <div class="hero-actions">
+      <a class="button" href="https://github.com/boletosscw-spec/Primal-Echo/archive/refs/heads/avances-enemigos-y-cinematicas.zip">Descargar proyecto <span class="button-spark" aria-hidden="true"></span></a>
+      <a class="button button-outline" href="/como-jugar/">Comienza el viaje</a>
+    </div>
+    <span class="fine-print">PC · Código fuente para Unity 6 · En desarrollo</span>
+    <button type="button" class="kael-replay" aria-controls="kael-entrance" hidden>Ver animación de Kael</button>
+  </div>
+  {% include 'game/entrada.html' %}
+  <a class="hero-scroll" href="#historia">Adéntrate en el mundo <span aria-hidden="true">↓</span></a>
 </section>
 <section class="story-scene" id="historia"><img src="{% static 'game/art/companeros-pixel-web.webp' %}" alt="Kael y Kiro contemplan las ruinas entre la niebla" width="1672" height="941" loading="lazy"><div class="story-copy reveal"><span class="eyebrow">TRAS EL ATAQUE, LAS PREGUNTAS</span><h2>Las ruinas guardan<br>las respuestas.</h2><p>Algo ha arrasado parte del hogar de Kael. Las criaturas no parecen actuar al azar. Las pistas conducen a unas antiguas instalaciones, donde la selva oculta mucho más que metal y piedra.</p><p>Con Kiro a su lado, el camino apenas comienza.</p><a class="editorial-link" href="/personajes/">Conoce a sus habitantes <span aria-hidden="true">↗</span></a>{% include 'game/kiro_tip.html' with tip='Hay mucho por descubrir. Avanza a tu ritmo.' %}</div></section>
 <section class="section-wrap" id="recorrido"><div class="section-heading reveal"><div><span class="eyebrow">EL RECORRIDO</span><h2>Más allá de<br>lo conocido.</h2></div><p>Desde el primer salto hasta las puertas de las instalaciones. Cada lugar cambia la forma de avanzar.</p></div><div class="level-grid">
