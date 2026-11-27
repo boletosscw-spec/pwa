@@ -259,3 +259,28 @@ html{scroll-padding-top:0}.story-scene,.guardian-scene{scroll-margin-top:var(--h
 .kael-replay[hidden]{display:none}
 
 .offline-controls{width:100%;max-width:640px;text-align:left}
+
+/* Edition 40 · foreground foliage parallax, in-dialog form errors, the four guardians, Orin, Kiro's flash */
+.hero-art img{transform:translate3d(calc(var(--pointer-x,0) * -10px),calc(var(--scene-y,0px) + var(--pointer-y,0) * -6px),0) scale(1.04)}
+.hero-front{position:absolute;inset:-5% -4%;z-index:3;pointer-events:none;transform:translate3d(calc(var(--pointer-x,0) * 26px),calc(var(--front-y,0px) + var(--pointer-y,0) * 14px),0);transition:transform .25s ease-out;will-change:transform}
+.hero-front img{width:100%;height:100%;object-fit:cover;opacity:.92;filter:brightness(.7) saturate(.9)}
+@media(max-width:699px){.hero-front{inset:-3% -30%}.hero-front img{opacity:.75}}
+@media(prefers-reduced-motion:reduce){.hero-front{transform:none!important;transition:none}}
+.form-error{margin:0 0 6px;padding:10px 14px;border-left:2px solid #ff9b7a;background:#ff9b7a14;color:#ffd4c4;font-size:12px!important;line-height:1.6}
+.form-error+.form-error{margin-top:0}
+.roster-guardians{grid-template-columns:1fr}
+.roster-guardians .creature-visual{display:flex;align-items:flex-end;justify-content:center;background:radial-gradient(ellipse at 50% 70%,#193d4a88,transparent 68%)}
+.roster-guardians .creature-visual img{width:100%;height:100%;object-fit:contain;object-position:center bottom;image-rendering:pixelated}
+.creature-card .boss-stage{display:block;margin-top:2px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.creature-locked .creature-visual{align-items:center}.creature-locked .creature-visual img{width:46%;height:auto;filter:brightness(0) drop-shadow(0 0 18px #73e3dfcc);opacity:.9;animation:locked-pulse 3.2s ease-in-out infinite}@keyframes locked-pulse{50%{filter:brightness(0) drop-shadow(0 0 30px #73e3df)}}
+@media(min-width:700px){.roster-guardians{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.roster-guardians{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.character-orin .character-portrait>img{height:320px}
+@media(min-width:700px){.character-orin .character-copy{order:-1}}
+.skill-kiro{display:flex;align-items:center;justify-content:center}
+.skill-kiro img{width:80%!important;height:auto!important;animation:none!important;image-rendering:auto;position:relative;z-index:1}
+.skill-kiro::after{content:'';position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%) scale(.2);background:radial-gradient(circle,#e9fffd 0,#73e3df 35%,#73e3df00 70%);opacity:0}
+.skill-card.is-playing .skill-kiro::after{animation:kiro-flash 2.4s ease-out infinite}
+@keyframes kiro-flash{0%,55%{opacity:0;transform:translate(-50%,-50%) scale(.2)}62%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(4)}}
+.skills-track .skill-card:last-child{grid-column:auto;max-width:none;justify-self:stretch}
+@media(min-width:1000px){.skills-track{grid-template-columns:repeat(6,minmax(0,1fr))}}

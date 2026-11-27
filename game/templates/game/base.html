@@ -6,14 +6,14 @@
 <link rel="manifest" href="{% static 'game/manifest.webmanifest' %}"><link rel="icon" href="{% static 'game/art/icon-192.png' %}"><link rel="apple-touch-icon" href="{% static 'game/art/icon-192.png' %}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'game/echo.css' %}?v=39">
+<link rel="stylesheet" href="{% static 'game/echo.css' %}?v=40">
 {% block head %}{% endblock %}
-<script src="{% static 'game/echo.js' %}?v=39" defer></script>
+<script src="{% static 'game/echo.js' %}?v=40" defer></script>
 </head><body class="echo-site {% block body_class %}{% endblock %}">
 <a href="#main" class="skip-link">Ir al contenido</a>
 {% include 'game/navegacion.html' %}
 <main id="main">{% block content %}{% endblock %}</main>
-<footer class="site-footer"><div class="footer-mist" aria-hidden="true"></div><div class="footer-content">{% include 'game/wordmark.html' with mark_class='wordmark-footer' %}<p>Las respuestas esperan al otro lado.</p><div class="footer-actions"><button class="button button-outline" data-install hidden>Instalar la app</button><button class="text-button" data-dialog="installHelp">Guardar esta web</button><a href="/novedades/">Sigue el desarrollo</a></div><div class="footer-bottom"><span>MonsterByte Studios © 2026</span><span>PC · Proyecto en desarrollo</span>{% if request.session.logueado %}<a href="/contacto/">Contacto</a><a href="/logout/">Cerrar sesión</a>{% else %}<button class="text-button" data-dialog="loginModal">Mi cuenta</button>{% endif %}</div></div></footer>
+<footer class="site-footer"><div class="footer-mist" aria-hidden="true"></div><div class="footer-content">{% include 'game/wordmark.html' with mark_class='wordmark-footer' %}<p>Las respuestas esperan al otro lado.</p><div class="footer-actions"><button class="button button-outline" data-install hidden>Instalar la app</button><button class="text-button" data-dialog="installHelp">Guardar esta web</button><a href="/novedades/">Sigue el desarrollo</a></div><div class="footer-bottom"><span>MonsterByte Studios © 2026</span><span>PC · Proyecto en desarrollo</span>{% if user.is_authenticated %}<a href="/contacto/">Contacto</a><a href="/logout/">Cerrar sesión</a>{% else %}<button class="text-button" data-dialog="loginModal">Mi cuenta</button>{% endif %}</div></div></footer>
 {% include 'game/acceso_modales.html' %}
 <dialog id="installHelp" class="echo-dialog" aria-labelledby="install-title"><button class="dialog-close" data-close aria-label="Cerrar">×</button><span class="eyebrow">PRIMAL ECHO CONTIGO</span><h2 id="install-title">Guarda el camino.</h2><p>En Android o Chrome, abre el menú del navegador y elige «Instalar aplicación» o «Añadir a pantalla de inicio».</p><p>En iPhone o iPad, abre esta web en Safari, pulsa Compartir y «Añadir a pantalla de inicio».</p><p class="fine-print">Se instala esta web de acompañamiento. El juego es un proyecto de PC.</p></dialog>
 </body></html>

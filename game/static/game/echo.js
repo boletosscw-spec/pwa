@@ -27,7 +27,10 @@
     dialog.addEventListener('click', event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeDialog(dialog); } });
   });
   menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeDialog(menu)));
-  document.querySelector('[data-dismiss-message]')?.addEventListener('click', event => event.currentTarget.closest('.site-messages').remove());
+  document.querySelectorAll('[data-dismiss-message]').forEach(button => button.addEventListener('click', event => event.currentTarget.closest('.site-messages').remove()));
+  // If login or registration failed, reopen that same dialog so the error is visible in context.
+  const formError = document.querySelector('dialog .form-error');
+  if (formError) openDialog(formError.closest('dialog'));
   // Local reveal effects, applied only when IntersectionObserver is supported.
   if ('IntersectionObserver' in window) {
     if (!reduced.matches) document.body.classList.add('motion-ready');
@@ -61,6 +64,7 @@
       if (rect.bottom > 0) {
         const y = Math.min(130, Math.max(0, -rect.top * .18));
         hero.style.setProperty('--scene-y', `${y}px`);
+        hero.style.setProperty('--front-y', `${-y * 1.6}px`);
       }
     }
     let active = guideSections[0];
@@ -70,6 +74,21 @@
       link.classList.toggle('is-active', selected);
       if (selected) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
     });
+  }
+  // Foreground foliage follows the pointer a little, for depth (mouse/trackpad only).
+  if (hero && !reduced.matches && matchMedia('(pointer: fine)').matches) {
+    let pointerQueued = false, px = 0, py = 0;
+    hero.addEventListener('pointermove', event => {
+      const rect = hero.getBoundingClientRect();
+      px = (event.clientX - rect.left) / rect.width - .5;
+      py = (event.clientY - rect.top) / rect.height - .5;
+      if (!pointerQueued) { pointerQueued = true; requestAnimationFrame(() => {
+        pointerQueued = false;
+        hero.style.setProperty('--pointer-x', px.toFixed(3));
+        hero.style.setProperty('--pointer-y', py.toFixed(3));
+      }); }
+    });
+    hero.addEventListener('pointerleave', () => { hero.style.setProperty('--pointer-x', 0); hero.style.setProperty('--pointer-y', 0); });
   }
   addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, {passive: true});
   addEventListener('resize', () => { if (innerWidth >= 1000) closeDialog(menu); update(); });

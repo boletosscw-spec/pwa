@@ -31,8 +31,8 @@ class GamePortalTests(TestCase):
             with self.subTest(path=path):
                 response = self.client.get(path)
                 self.assertEqual(response.status_code, 200)
-                self.assertContains(response, 'echo.css?v=39')
-                self.assertContains(response, 'echo.js?v=39')
+                self.assertContains(response, 'echo.css?v=40')
+                self.assertContains(response, 'echo.js?v=40')
                 self.assertContains(response, 'id="mobile-menu"')
                 self.assertContains(response, 'id="loginModal"')
                 self.assertContains(response, 'manifest.webmanifest')
@@ -93,8 +93,46 @@ class GamePortalTests(TestCase):
         self.assertRedirects(self.client.post('/registro/', {
             'username': 'kael', 'email': 'kael@example.test',
             'password1': 'test-echo-password', 'password2': 'test-echo-password'
-        }), '/')
+        }), '/inicio2/')
         self.assertTrue(User.objects.filter(username='kael').exists())
+        # After registering, the site must treat the visitor as signed in.
+        response = self.client.get('/inicio2/')
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'href="/logout/"')
+        self.assertNotContains(response, 'data-dialog="loginModal">Mi cuenta')
+
+    def test_registration_errors_reopen_the_dialog(self):
+        User.objects.create_user(username='kael', email='kael@example.test', password='test-echo-password')
+        response = self.client.post('/registro/', {
+            'username': 'kael', 'email': 'otro@example.test',
+            'password1': 'abc', 'password2': 'xyz'
+        }, HTTP_REFERER='http://testserver/personajes/', follow=True)
+        self.assertEqual(response.redirect_chain[-1][0], 'http://testserver/personajes/')
+        self.assertContains(response, 'class="form-error"', count=2)
+        self.assertContains(response, 'Ese nombre de usuario ya está en uso.')
+        self.assertContains(response, 'Las contraseñas no coinciden.')
+        self.assertFalse(User.objects.filter(email='otro@example.test').exists())
+        weak = self.client.post('/registro/', {
+            'username': 'kiro', 'email': 'kiro@example.test', 'password1': '12345', 'password2': '12345'
+        }, follow=True)
+        self.assertContains(weak, 'class="form-error"')
+        self.assertFalse(User.objects.filter(username='kiro').exists())
+
+    def test_wrong_login_shows_error_inside_dialog(self):
+        response = self.client.post('/login/', {'usuario': 'nadie', 'password': 'mal'}, follow=True)
+        self.assertContains(response, '<p class="form-error" role="alert">Usuario o contraseña incorrectos.</p>')
+
+    def test_characters_show_the_four_guardians_and_orin(self):
+        response = self.client.get('/personajes/')
+        for text in ['Atlas', 'Aeris', 'Centinela Rex', 'NÉMESIS', 'Orin', 'atlas.webp', 'aeris.webp', 'orin.webp']:
+            self.assertContains(response, text)
+        for removed in ['Ala Cian', 'Ala Ámbar', 'explorador.webp']:
+            self.assertNotContains(response, removed)
+        self.check_resources(response)
+        guide = self.client.get('/como-jugar/')
+        self.assertContains(guide, 'Destello de Kiro')
+        for anchor in ['id="tutorial"', 'id="valle"', 'id="instalaciones"']:
+            self.assertContains(guide, anchor)
 
     def test_manifest_and_offline_worker(self):
         root = Path(settings.BASE_DIR) / 'game/static'
@@ -110,7 +148,7 @@ class GamePortalTests(TestCase):
         worker = self.client.get('/service-worker.js')
         self.assertEqual(worker['Content-Type'], 'application/javascript')
         self.assertEqual(worker['Service-Worker-Allowed'], '/')
-        self.assertContains(worker, 'primal-echo-v39')
+        self.assertContains(worker, 'primal-echo-v40')
         self.assertContains(worker, "request.method !== 'GET'")
 
     def test_entrance_webp_assets_exist(self):
