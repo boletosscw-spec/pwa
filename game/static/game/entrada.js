@@ -6,7 +6,6 @@
     if (!overlay || !script) return;
     const hero = overlay.closest('.world-home-hero');
     const actions = hero?.querySelector('.hero-actions');
-    const replay = hero?.querySelector('.kael-replay');
     const arrived = performance.now();
     let failSafe;
     function showActions() {
@@ -255,7 +254,6 @@
             scene = await prepare(); resize();
             render(duration + 10); overlay.dataset.phase = 'waiting';
             if (!reducedMotion.matches) await new Promise(resolve => window.setTimeout(resolve, Math.max(0, 1400 - (performance.now() - arrived))));
-            if (replay) replay.hidden = false;
             if (!reducedMotion.matches) await waitUntilVisible();
             if (reducedMotion.matches) { render(2500); overlay.dataset.phase = 'still'; showActions(); return; }
             clearTimeout(failSafe);
@@ -275,10 +273,6 @@
         cancelAnimationFrame(frameId); running = false;
         if (scene) { render(2500); overlay.dataset.phase = 'still'; }
         showActions();
-    });
-    replay?.addEventListener('click', () => {
-        overlay.scrollIntoView({block: 'center', behavior: reducedMotion.matches ? 'instant' : 'smooth'});
-        play();
     });
     beginIntro();
     play();

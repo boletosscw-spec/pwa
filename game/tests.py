@@ -31,7 +31,7 @@ class GamePortalTests(TestCase):
             with self.subTest(path=path):
                 response = self.client.get(path)
                 self.assertEqual(response.status_code, 200)
-                self.assertContains(response, 'echo.css?v=40')
+                self.assertContains(response, 'echo.css?v=41')
                 self.assertContains(response, 'echo.js?v=40')
                 self.assertContains(response, 'id="mobile-menu"')
                 self.assertContains(response, 'id="loginModal"')
@@ -47,7 +47,7 @@ class GamePortalTests(TestCase):
                      'Valle del Eco', 'Claro del Despertar', 'Instalaciones abandonadas',
                      'Doble salto', 'Dash', 'Salto de pared', 'Pogo', 'Arco',
                      'Descargar proyecto', 'Código fuente para Unity 6',
-                     'avances-enemigos-y-cinematicas.zip', 'class="kael-scene"', 'entrada.js?v=37']:
+                     'avances-enemigos-y-cinematicas.zip', 'class="kael-scene"', 'entrada.js?v=38']:
             self.assertContains(response, text)
         self.assertNotContains(response, 'rex-cinematic-wide.webp')
         self.assertNotContains(response, 'rex-cinematic-tall.webp')
@@ -148,7 +148,7 @@ class GamePortalTests(TestCase):
         worker = self.client.get('/service-worker.js')
         self.assertEqual(worker['Content-Type'], 'application/javascript')
         self.assertEqual(worker['Service-Worker-Allowed'], '/')
-        self.assertContains(worker, 'primal-echo-v40')
+        self.assertContains(worker, 'primal-echo-v41')
         self.assertContains(worker, "request.method !== 'GET'")
 
     def test_entrance_webp_assets_exist(self):
