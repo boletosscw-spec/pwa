@@ -90,10 +90,10 @@
         if (!assetsPromise) {
             assetsPromise = Promise.all([
                 load('kael-caminar.webp'), load('kael-gestos.webp'), load('kael-correr-asustado.webp'),
-                ...Array.from({length: 8}, (_, i) => load(`explorador-correr-${String(i + 1).padStart(2, '0')}.webp`))
-            ]).then(([walk, poses, run, ...enemy]) => ({
+                load('explorador-carrera.png')
+            ]).then(([walk, poses, run, enemy]) => ({
                 walk: frames(walk, 8, 1, 8), poses: frames(poses, 2, 1, 2),
-                run: frames(run, 3, 2, 6), enemy: enemy.map(image => frames(image, 1, 1, 1)[0])
+                run: frames(run, 3, 2, 6), enemy: frames(enemy, 8, 1, 8)
             }));
         }
         return assetsPromise;
