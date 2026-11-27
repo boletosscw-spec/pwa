@@ -47,7 +47,7 @@ class GamePortalTests(TestCase):
                      'Valle del Eco', 'Claro del Despertar', 'Instalaciones abandonadas',
                      'Doble salto', 'Dash', 'Salto de pared', 'Pogo', 'Arco',
                      'Descargar proyecto', 'Código fuente para Unity 6',
-                     'avances-enemigos-y-cinematicas.zip', 'class="kael-scene"', 'entrada.js?v=39']:
+                     'avances-enemigos-y-cinematicas.zip', 'class="kael-scene"', 'entrada.js?v=40']:
             self.assertContains(response, text)
         self.assertNotContains(response, 'rex-cinematic-wide.webp')
         self.assertNotContains(response, 'rex-cinematic-tall.webp')
@@ -154,6 +154,6 @@ class GamePortalTests(TestCase):
     def test_entrance_sprite_assets_exist(self):
         root = Path(settings.BASE_DIR) / 'game/static/game/img/entrada'
         assets = ['kael-caminar.webp', 'kael-gestos.webp', 'kael-correr-asustado.webp']
-        assets.append('explorador-carrera.png')
+        assets.append('atlas-embestida.png')
         for name in assets:
             self.assertTrue((root / name).is_file())

@@ -90,10 +90,10 @@
         if (!assetsPromise) {
             assetsPromise = Promise.all([
                 load('kael-caminar.webp'), load('kael-gestos.webp'), load('kael-correr-asustado.webp'),
-                load('explorador-carrera.png')
+                load('atlas-embestida.png')
             ]).then(([walk, poses, run, enemy]) => ({
                 walk: frames(walk, 8, 1, 8), poses: frames(poses, 2, 1, 2),
-                run: frames(run, 3, 2, 6), enemy: frames(enemy, 8, 1, 8)
+                run: frames(run, 3, 2, 6), enemy: frames(enemy, 6, 1, 6)
             }));
         }
         return assetsPromise;

@@ -5,7 +5,7 @@ La web oficial de Primal Echo está publicada en [Railway](https://primal-echo-p
 ## Imágenes vigentes
 
 - [Personajes y objetos](game/static/game/img/actual). Kael, Kiro, Explorador, Ala Cian, Ala Ámbar, Rex, NÉMESIS y los objetos del brazalete. Los PNG son los archivos para reutilizar. La web carga las versiones WebP donde las necesita.
-- [Animación de entrada](game/static/game/img/entrada). Fotogramas de Kael y el Explorador.
+- [Animación de entrada](game/static/game/img/entrada). Fotogramas de Kael y Atlas.
 - [Sprites del videojuego en Unity](https://github.com/boletosscw-spec/Primal-Echo/tree/avances-enemigos-y-cinematicas/Assets). Los [recursos de Atlas](https://github.com/boletosscw-spec/Primal-Echo/tree/avances-enemigos-y-cinematicas/Assets/Resources/Jefes/Atlas) están en ese repositorio.
 
 Las ilustraciones de la web y los recursos de la portada están en [`art`](game/static/game/art).
